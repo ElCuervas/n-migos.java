@@ -153,6 +153,10 @@ public class Catalogo {
             }
         }
     }
+
+    public ArrayList<Juego> getListaJuegos() {
+        return listaJuegos;
+    }
 }
 /*  Se modifico la clase para funcionar como un catalogo, almacenando los juegos y sus Id en arreglos los cuales se usaran en el programa
  */

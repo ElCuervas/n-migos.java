@@ -46,4 +46,5 @@ public class Juego {
         System.out.println("Calificación: " + calificacion);
         System.out.println("Url de Imagen: "+ imagen);
     }
+
 }

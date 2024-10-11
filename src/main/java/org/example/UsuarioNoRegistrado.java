@@ -3,7 +3,7 @@ package org.example;
 public class UsuarioNoRegistrado extends Usuario {
 
     public UsuarioNoRegistrado(long idUsuario) {
-        super(idUsuario);
+        this.idUsuario= idUsuario;
     }
 
     public void registrar() {
