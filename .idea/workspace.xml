@@ -6,9 +6,23 @@
   <component name="ChangeListManager">
     <list default="true" id="979f8c4f-0994-426f-987a-64502364c2d0" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Juego.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Juego.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Usuario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/UsuarioNoRegistrado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/UsuarioNoRegistrado.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/UsuarioRegistrado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/UsuarioRegistrado.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/Biblioteca.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/Catalogo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/Juego.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/Perfil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/Resena.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/Usuario.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/UsuarioNoRegistrado.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/UsuarioRegistrado.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/n-migos-1.0-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/sonar/report-task.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,12 +92,12 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/example/UsuarioRegistrado.java</url>
-          <line>33</line>
+          <line>75</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-field">
           <url>file://$PROJECT_DIR$/src/main/java/org/example/UsuarioRegistrado.java</url>
-          <line>7</line>
+          <line>19</line>
           <properties field="contraseña" class="org.example.UsuarioRegistrado" />
           <option name="timeStamp" value="4" />
         </line-breakpoint>

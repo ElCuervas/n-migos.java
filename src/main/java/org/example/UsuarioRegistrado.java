@@ -15,9 +15,9 @@ public class UsuarioRegistrado extends Usuario {
     private String nombre;
 
     /**
-     * Contraseña del usuario registrado.
+     * contrasena del usuario registrado.
      */
-    private String contraseña;
+    private String contrasena;
 
     /**
      * Lista de géneros favoritos del usuario.
@@ -34,26 +34,26 @@ public class UsuarioRegistrado extends Usuario {
      *
      * @param idUsuario   Identificador único del usuario.
      * @param nombre      Nombre del usuario.
-     * @param contraseña  Contraseña del usuario.
+     * @param contrasena  contrasena del usuario.
      */
-    public UsuarioRegistrado(long idUsuario, String nombre, String contraseña) {
+    public UsuarioRegistrado(long idUsuario, String nombre, String contrasena) {
         this.idUsuario = idUsuario;
         this.nombre = nombre;
-        this.contraseña = contraseña;
+        this.contrasena = contrasena;
         this.generoFavorito = new ArrayList<>();
         this.biblioteca = new Biblioteca();
     }
 
     /**
-     * Método para iniciar sesión del usuario comparando la contraseña ingresada.
+     * Método para iniciar sesión del usuario comparando la contrasena ingresada.
      *
-     * @param contraseña Contraseña ingresada por el usuario.
+     * @param contrasena contrasena ingresada por el usuario.
      */
-    public void iniciarSesion(String contraseña) {
-        if (this.contraseña == contraseña) {
+    public void iniciarSesion(String contrasena) {
+        if(this.contrasena == contrasena){
             System.out.println("Iniciando sesión para el usuario: " + nombre);
         }else{
-            System.out.printf("Contraseña no valida");
+            System.out.printf("contrasena no valida");
         }
     }
 
