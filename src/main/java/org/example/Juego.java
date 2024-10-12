@@ -8,13 +8,13 @@ import java.util.ArrayList;
  */
 public class Juego {
     private String titulo;
+    private String lanzamieto;
     private String genero;
     private String desarrollador;
     private String imagen;
     private String resumen;
     private float calificacion;
     private ArrayList<Resena> resenas;
-
     /**
      * Crea una nueva instancia de Juego con los detalles proporcionados.
      * La calificación se inicializa en 0 y la lista de reseñas se crea vacía.
@@ -25,8 +25,9 @@ public class Juego {
      * @param imagen la ruta o URL de la imagen asociada al juego
      * @param resumen una breve descripción del juego
      */
-    public Juego(String titulo, String genero, String desarrollador, String imagen, String resumen) {
+    public Juego(String titulo, String lanzamiento, String genero, String desarrollador, String imagen, String resumen) {
         this.titulo = titulo;
+        this.lanzamieto = lanzamiento;
         this.genero = genero;
         this.desarrollador = desarrollador;
         this.imagen = imagen;
@@ -79,5 +80,7 @@ public class Juego {
         System.out.println("Género: " + genero);
         System.out.println("Desarrollador: " + desarrollador);
         System.out.println("Calificación: " + calificacion);
+        System.out.println("Url de Imagen: "+ imagen);
     }
+
 }

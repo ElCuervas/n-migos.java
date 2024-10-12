@@ -12,7 +12,7 @@ public class UsuarioNoRegistrado extends Usuario {
      * @param idUsuario el identificador único del usuario
      */
     public UsuarioNoRegistrado(long idUsuario) {
-        super(idUsuario);
+        this.idUsuario= idUsuario;
     }
 
     /**

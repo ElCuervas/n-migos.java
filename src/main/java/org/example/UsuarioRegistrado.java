@@ -7,16 +7,14 @@ public class UsuarioRegistrado extends Usuario {
     String nombre;
     private String contraseña;
     private ArrayList<String> generoFavorito;
-    private Perfil perfil;
     private Biblioteca biblioteca;
 
     public UsuarioRegistrado(long idUsuario, String nombre, String contraseña) {
-        super(idUsuario);
+        this.idUsuario = idUsuario;
         this.nombre = nombre;
         this.contraseña = contraseña;
         this.generoFavorito = new ArrayList<>();
         this.biblioteca = new Biblioteca();
-        this.perfil = new Perfil(this, this.biblioteca);
     }
 
     public void iniciarSesion(String contraseña) {
@@ -26,8 +24,9 @@ public class UsuarioRegistrado extends Usuario {
             System.out.printf("Contraseña no valida");
         }
     }
-    public void editarPerfil() {
-        System.out.println("Editando perfil del usuario: " + nombre);
+
+    public Biblioteca getBiblioteca() {
+        return biblioteca;
     }
 
     public void agregarJuegoBiblioteca(Juego juego) {
@@ -60,4 +59,5 @@ public class UsuarioRegistrado extends Usuario {
     public void filtrarJuegos(String filtro) {
         System.out.println("Filtrando juegos en la biblioteca del usuario: " + filtro);
     }
+
 }

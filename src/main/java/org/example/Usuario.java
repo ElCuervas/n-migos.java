@@ -9,13 +9,9 @@ public abstract class Usuario {
     protected long idUsuario;
 
     /**
-     * Crea una nueva instancia de Usuario con un identificador único.
-     *
-     * @param idUsuario el identificador único del usuario
+     * Constructor por defecto para la clase Usuario. No asigna ningún valor al identificador de usuario.
      */
-    public Usuario(long idUsuario) {
-        this.idUsuario = idUsuario;
-    }
+    public Usuario() {}
 
     /**
      * Busca un juego por su nombre. Este método debe ser implementado por las
