@@ -3,10 +3,7 @@ public class Main {
     public static void main(String[] args) {
         //pruebas catalogo
         Catalogo catalogo = new Catalogo();
-        catalogo.mostrarCatalogo();
-        catalogo.conseguirJuegos();
-        catalogo.conseguirIDs();
-        catalogo.conseguirJuegos();
+        catalogo.llenarCatalogoConJuegos();
         catalogo.mostrarCatalogo();
 
         //pruebas usuario y perfil
