@@ -12,6 +12,7 @@ public class CreadorJuegos {
 
     public CreadorJuegos() {
         this.consultorApi = new ConsultorApi();
+        consultorApi.conseguirIDs();
     }
 
     /**
@@ -20,7 +21,7 @@ public class CreadorJuegos {
      */
     public ArrayList<Juego> crearJuegosDesdeApi() {
         ArrayList<Juego> listaJuegos = new ArrayList<>();
-        ArrayList<Integer> gameIDs = consultorApi.obtenerGameIDs();
+        ArrayList<Integer> gameIDs = consultorApi.getGameIDs();
 
         for (Integer gameId : gameIDs) {
             JSONObject gameData = consultorApi.obtenerDetallesJuego(gameId);
@@ -41,11 +42,12 @@ public class CreadorJuegos {
     private Juego crearJuegoDesdeJson(JSONObject gameData) {
         String name = gameData.optString("name");
         String released = gameData.optString("released");
+
         String developers = obtenerDatosLista(gameData, "developers");
         String genres = obtenerDatosLista(gameData , "genres");
+
         String backgroundImage = gameData.optString("background_image");
         String description = gameData.optString("description");
-
 
         return new Juego(name, released, genres, developers, backgroundImage, description);
     }

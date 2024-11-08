@@ -3,7 +3,7 @@ public class Main {
     public static void main(String[] args) {
         //pruebas catalogo
         Catalogo catalogo = new Catalogo();
-        catalogo.llenarCatalogoConJuegos();
+        catalogo.conseguirJuegos();
         catalogo.mostrarCatalogo();
 
         //pruebas usuario y perfil
