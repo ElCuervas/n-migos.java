@@ -25,7 +25,7 @@ public class Catalogo {
         gameIDs = new ArrayList<>();
     }
 
-    private static final String apiKey = "af375b9d59e746259fe257e3b81e0f0d"; //Esta llave solo estara disponible hasta la revision de refactoring
+    private static final String apiKey = "93d03e013f054d4b957439eaa1b0503b"; //desabilitada
 
     /**
      * Agrega un juego al catálogo.
@@ -183,5 +183,9 @@ public class Catalogo {
      */
     public ArrayList<Juego> getListaJuegos() {
         return listaJuegos;
+    }
+
+    public ArrayList<Integer> getGameIDs() {
+        return gameIDs;
     }
 }

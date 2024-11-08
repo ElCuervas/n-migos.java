@@ -1,0 +1,53 @@
+@options
+@argfile
+-classpath
+'C:/Users/sebas/.m2/repository/org/json/json/20231013/json-20231013.jar'
+-encoding
+'UTF-8'
+-protected
+-source
+'17'
+-sourcepath
+'C:/Users/sebas/OneDrive/Documentos/GitHub/n-migos.java/src/main/java'
+-author
+-bottom
+'Copyright &#169; 2024. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'C:/Users/sebas/OneDrive/Documentos/GitHub/n-migos.java/target/site/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'n-migos 1.0-SNAPSHOT API'
+-use
+-version
+-windowtitle
+'n-migos 1.0-SNAPSHOT API'
+'C:/Users/sebas/OneDrive/Documentos/GitHub/n-migos.java/src/main/java/org/example/Biblioteca.java'
+'C:/Users/sebas/OneDrive/Documentos/GitHub/n-migos.java/src/main/java/org/example/Catalogo.java'
+'C:/Users/sebas/OneDrive/Documentos/GitHub/n-migos.java/src/main/java/org/example/Juego.java'
+'C:/Users/sebas/OneDrive/Documentos/GitHub/n-migos.java/src/main/java/org/example/Main.java'
+'C:/Users/sebas/OneDrive/Documentos/GitHub/n-migos.java/src/main/java/org/example/Perfil.java'
+'C:/Users/sebas/OneDrive/Documentos/GitHub/n-migos.java/src/main/java/org/example/Resena.java'
+'C:/Users/sebas/OneDrive/Documentos/GitHub/n-migos.java/src/main/java/org/example/Usuario.java'
+'C:/Users/sebas/OneDrive/Documentos/GitHub/n-migos.java/src/main/java/org/example/UsuarioNoRegistrado.java'
+'C:/Users/sebas/OneDrive/Documentos/GitHub/n-migos.java/src/main/java/org/example/UsuarioRegistrado.java'
+C:\Users\sebas\.m2\repository\org\json\json\20231013\json-20231013.jar = 1728612160261
+C:\Users\sebas\OneDrive\Documentos\GitHub\n-migos.java\src\main\java = 1728612726299
+C:\Users\sebas\OneDrive\Documentos\GitHub\n-migos.java\target\site\apidocs\allclasses-index.html = 1728701658441
+C:\Users\sebas\OneDrive\Documentos\GitHub\n-migos.java\target\site\apidocs\allpackages-index.html = 1728701658448
+C:\Users\sebas\OneDrive\Documentos\GitHub\n-migos.java\target\site\apidocs\element-list = 1728701658073
+C:\Users\sebas\OneDrive\Documentos\GitHub\n-migos.java\target\site\apidocs\help-doc.html = 1728701658529
+C:\Users\sebas\OneDrive\Documentos\GitHub\n-migos.java\target\site\apidocs\index-all.html = 1728701658513
+C:\Users\sebas\OneDrive\Documentos\GitHub\n-migos.java\target\site\apidocs\index.html = 1728701658521
+C:\Users\sebas\OneDrive\Documentos\GitHub\n-migos.java\target\site\apidocs\jquery-ui.overrides.css = 1728701658620
+C:\Users\sebas\OneDrive\Documentos\GitHub\n-migos.java\target\site\apidocs\member-search-index.js = 1728701658464
+C:\Users\sebas\OneDrive\Documentos\GitHub\n-migos.java\target\site\apidocs\module-search-index.js = 1728701658451
+C:\Users\sebas\OneDrive\Documentos\GitHub\n-migos.java\target\site\apidocs\overview-tree.html = 1728701658397
+C:\Users\sebas\OneDrive\Documentos\GitHub\n-migos.java\target\site\apidocs\package-search-index.js = 1728701658453
+C:\Users\sebas\OneDrive\Documentos\GitHub\n-migos.java\target\site\apidocs\script.js = 1728701658538
+C:\Users\sebas\OneDrive\Documentos\GitHub\n-migos.java\target\site\apidocs\search.js = 1728701658577
+C:\Users\sebas\OneDrive\Documentos\GitHub\n-migos.java\target\site\apidocs\stylesheet.css = 1728701658536
+C:\Users\sebas\OneDrive\Documentos\GitHub\n-migos.java\target\site\apidocs\tag-search-index.js = 1728701658466
+C:\Users\sebas\OneDrive\Documentos\GitHub\n-migos.java\target\site\apidocs\type-search-index.js = 1728701658456
