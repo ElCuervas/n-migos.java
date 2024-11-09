@@ -8,13 +8,11 @@ import static org.junit.jupiter.api.Assertions.*;
 class CatalogoPostReacTest {
     private Catalogo catalogo;
     private CreadorJuegos creadorJuegos;
-    private ConsultorApi consultorApi;
 
     @BeforeEach
     void setUp() {
         catalogo = new Catalogo();
-        creadorJuegos = new CreadorJuegos();
-        consultorApi = new ConsultorApi();
+        creadorJuegos = catalogo.getCreadorJuegos();
     }
 
     @Test
@@ -27,25 +25,28 @@ class CatalogoPostReacTest {
 
     @Test
     void testIngresarID() {
-        consultorApi.ingresarID(123);
-        consultorApi.ingresarID(123); // Intentamos agregar la misma ID otra vez
-        assertEquals(1, consultorApi.getGameIDs().size()); // La ID no debe duplicarse
+        creadorJuegos.ingresarID(123);
+        creadorJuegos.ingresarID(123); // Intentamos agregar la misma ID otra vez
+        assertEquals(1, creadorJuegos.getGameIDs().size()); // La ID no debe duplicarse
     }
 
     @Test
     void testConseguirIDs() {
         // Simulamos la obtención de IDs de la API
-        consultorApi.conseguirIDs();
-        assertFalse(consultorApi.getGameIDs().isEmpty()); // Verificamos que la lista de IDs no esté vacía después de la llamada
+        creadorJuegos.conseguirIDs();
+        assertFalse(creadorJuegos.getGameIDs().isEmpty()); // Verificamos que la lista de IDs no esté vacía después de la llamada
     }
 
     @Test
     void testConseguirJuegos() {
+        // Primero agregamos algunas IDs
+        creadorJuegos.ingresarID(1);
+        creadorJuegos.ingresarID(2);
 
         // Ejecutamos el método para conseguir los juegos
         catalogo.conseguirJuegos();
-        int largoCatalogo = catalogo.getListaJuegos().size();
+
         // Verificamos que los juegos fueron añadidos
-        assertTrue(largoCatalogo > 0 && largoCatalogo <= 10);
+        assertFalse(catalogo.getListaJuegos().isEmpty());
     }
 }

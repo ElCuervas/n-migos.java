@@ -185,6 +185,7 @@ public class CatalogoPreR {
         return listaJuegos;
     }
 
+
     public ArrayList<Integer> getGameIDs() {
         return gameIDs;
     }

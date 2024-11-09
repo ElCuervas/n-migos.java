@@ -14,17 +14,15 @@ import java.util.ArrayList;
  */
 public class ConsultorApi {
     private static final String apiKey = "93d03e013f054d4b957439eaa1b0503b"; //desabilitada
-    private static ArrayList<Integer> gameIDs = null;
 
-    public ConsultorApi() {
-        gameIDs = new ArrayList<>();
-    }
 
     /**
      * Método para obtener una lista de IDs de juegos desde la API.
+     * @return lista con las IDs conseguidas de la api.
      */
-    public void conseguirIDs() {
+    public ArrayList<Integer> peticionIDs() {
         String urlString = "https://api.rawg.io/api/games?key=" + apiKey + "&ordering=-added&page_size=10";
+        ArrayList<Integer> gameIDs = new ArrayList<>();
 
         try {
             JSONObject jsonResponse = LlamadaApi(urlString);
@@ -39,15 +37,10 @@ public class ConsultorApi {
         } catch (Exception e) {
             e.printStackTrace();
         }
+        return gameIDs;
     }
 
-    public void ingresarID(int id){
-        if (gameIDs.contains(id)){
-            System.out.println("La id de este juego ya fue obtenida previamente");
-        }else{
-            gameIDs.add(id);
-        }
-    }
+
 
     /**
      * Método para obtener los detalles de un juego específico utilizando su ID.
@@ -66,6 +59,11 @@ public class ConsultorApi {
         return gameData;
     }
 
+    /**
+     * Método que hace peticiones de informacion referente a juegos.
+     * @param urlString url de la peticion.
+     * @return JSONObject con los detalles a pedir de los juegos.
+     */
     private JSONObject LlamadaApi(String urlString){
         JSONObject jsonResponse=null;
         try {
@@ -95,8 +93,5 @@ public class ConsultorApi {
         }
         return jsonResponse;
     }
-
-    public ArrayList<Integer> getGameIDs() {
-        return gameIDs;
-    }
+    
 }
