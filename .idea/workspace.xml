@@ -5,57 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="979f8c4f-0994-426f-987a-64502364c2d0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/PerfilTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/javadoc-bundle-options/javadoc-options-javadoc-resources.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-javadoc-plugin-stale-data.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site-n-migos.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/apidocs/allclasses-index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/apidocs/allpackages-index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/apidocs/element-list" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/apidocs/help-doc.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/apidocs/index-all.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/apidocs/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/apidocs/jquery-ui.overrides.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/apidocs/legal/COPYRIGHT" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/apidocs/legal/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/apidocs/legal/jquery.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/apidocs/legal/jqueryUI.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/apidocs/member-search-index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/apidocs/module-search-index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/apidocs/org/example/Biblioteca.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/apidocs/org/example/Catalogo.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/apidocs/org/example/Juego.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/apidocs/org/example/Main.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/apidocs/org/example/Perfil.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/apidocs/org/example/Resena.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/apidocs/org/example/Usuario.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/apidocs/org/example/UsuarioNoRegistrado.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/apidocs/org/example/UsuarioRegistrado.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/apidocs/org/example/class-use/Biblioteca.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/apidocs/org/example/class-use/Catalogo.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/apidocs/org/example/class-use/Juego.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/apidocs/org/example/class-use/Main.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/apidocs/org/example/class-use/Perfil.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/apidocs/org/example/class-use/Resena.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/apidocs/org/example/class-use/Usuario.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/apidocs/org/example/class-use/UsuarioNoRegistrado.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/apidocs/org/example/class-use/UsuarioRegistrado.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/apidocs/org/example/package-summary.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/apidocs/org/example/package-tree.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/apidocs/org/example/package-use.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/apidocs/overview-tree.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/apidocs/package-search-index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/apidocs/resources/glass.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/apidocs/resources/x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/apidocs/script-dir/jquery-3.6.1.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/apidocs/script-dir/jquery-ui.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/apidocs/script-dir/jquery-ui.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/apidocs/script.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/apidocs/search.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/apidocs/stylesheet.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/apidocs/tag-search-index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/apidocs/type-search-index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/PerfilTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/PerfilTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/Perfil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/Perfil.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,17 +44,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.PerfilTest.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;ftr-SAillapan&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "JUnit.PerfilTest.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "ftr-SAillapan",
+    "kotlin-language-version-configured": "true",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "0d570cb2-96df-43cc-80da-7f777e6d0afe",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="PerfilTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="n-migos" />

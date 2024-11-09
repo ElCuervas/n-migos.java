@@ -2,6 +2,7 @@ package org.example;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
@@ -18,8 +19,9 @@ public class PerfilTest {
         System.setOut(new PrintStream(ContenidoSystem));
     }
     @Test
-    void CrearPerfiles() {
+    void CrearPerfil() {
         Perfil perfil = new Perfil(usuario);
+        assertNotNull(perfil, "La clase perfil no fue creada correctamente");
     }
     @Test
     void MostrarInformacion(){
