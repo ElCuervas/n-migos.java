@@ -5,7 +5,7 @@ public class Main {
         Catalogo catalogo = new Catalogo();
         catalogo.mostrarCatalogo();
         catalogo.conseguirJuegos();
-        catalogo.conseguirIDs();
+        catalogo.getCreadorJuegos().conseguirIDs();
         catalogo.conseguirJuegos();
         catalogo.mostrarCatalogo();
 
@@ -23,6 +23,5 @@ public class Main {
         biblioteca.agregarJuego(juego2);
         biblioteca.agregarJuego(juego3);
         System.out.println(biblioteca);
-
     }
 }
