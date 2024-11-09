@@ -5,29 +5,69 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="979f8c4f-0994-426f-987a-64502364c2d0" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/PerfilTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/UsuarioRegistrado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/UsuarioRegistrado.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/Biblioteca.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/Catalogo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/Juego.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/Perfil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/Resena.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/Usuario.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/UsuarioNoRegistrado.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/UsuarioRegistrado.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/n-migos-1.0-SNAPSHOT.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/sonar/report-task.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/javadoc-bundle-options/javadoc-options-javadoc-resources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-javadoc-plugin-stale-data.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site-n-migos.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/allclasses-index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/allpackages-index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/element-list" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/help-doc.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/index-all.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/jquery-ui.overrides.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/legal/COPYRIGHT" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/legal/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/legal/jquery.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/legal/jqueryUI.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/member-search-index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/module-search-index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/org/example/Biblioteca.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/org/example/Catalogo.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/org/example/Juego.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/org/example/Main.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/org/example/Perfil.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/org/example/Resena.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/org/example/Usuario.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/org/example/UsuarioNoRegistrado.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/org/example/UsuarioRegistrado.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/org/example/class-use/Biblioteca.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/org/example/class-use/Catalogo.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/org/example/class-use/Juego.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/org/example/class-use/Main.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/org/example/class-use/Perfil.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/org/example/class-use/Resena.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/org/example/class-use/Usuario.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/org/example/class-use/UsuarioNoRegistrado.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/org/example/class-use/UsuarioRegistrado.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/org/example/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/org/example/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/org/example/package-use.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/overview-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/package-search-index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/resources/glass.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/resources/x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/script-dir/jquery-3.6.1.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/script-dir/jquery-ui.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/script-dir/jquery-ui.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/script.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/search.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/stylesheet.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/tag-search-index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/type-search-index.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -54,6 +94,8 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PerfilTest.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;ftr-SAillapan&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
@@ -61,6 +103,28 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RunManager">
+    <configuration name="PerfilTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="n-migos" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.PerfilTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.PerfilTest" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
