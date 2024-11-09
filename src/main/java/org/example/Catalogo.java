@@ -15,13 +15,7 @@ public class Catalogo {
     }
 
     public void conseguirJuegos() {
-        ArrayList juegosObtenidos =creadorJuegos.crearJuegosDesdeApi();
-        if (juegosObtenidos.isEmpty()){
-            System.out.println("Primero se tienen que ingresar las ID al catálogo");
-        }else {
-            listaJuegos.addAll(juegosObtenidos);
-        }
-        
+        listaJuegos.addAll(creadorJuegos.crearJuegosDesdeApi());
     }
 
     public void ingresarJuego(Juego juego){
@@ -36,16 +30,11 @@ public class Catalogo {
         return listaJuegos;
     }
 
-    public void mostrarCatalogo(){
-        if (listaJuegos.isEmpty()) {
-            System.out.println("El catálogo está vacío de momento");
-        } else {
-            for (Juego juego : listaJuegos) {
-                System.out.println("-----------------------------------------------------------------------------------------");
-                juego.mostrarDetalles();
-            }
+    public void mostrarCatalogo() {
+        for (Juego juego : listaJuegos) {
+            System.out.println("-----------------------------------------------------------------------------------------");
+            juego.mostrarDetalles();
         }
     }
-
 }
 
