@@ -36,6 +36,14 @@ public class Juego {
         this.resenas = new ArrayList<>();
     }
 
+    public ArrayList<Resena> getResenas() {
+        return resenas;
+    }
+
+    public float getCalificacion() {
+        return calificacion;
+    }
+
     /**
      * Obtiene el título del juego.
      *
