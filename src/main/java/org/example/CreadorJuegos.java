@@ -10,7 +10,6 @@ import java.util.ArrayList;
 public class CreadorJuegos {
     private final ConsultorApi consultorApi;
     private static ArrayList<Integer> gameIDs;
-
     /**
      * Constructor que inicializa el creador de juegos y crea una lista vacía de IDs de juegos.
      */
@@ -21,7 +20,6 @@ public class CreadorJuegos {
 
     /**
      * Crea y devuelve una lista de juegos basada en los IDs obtenidos por {@link ConsultorApi}.
-     * Si no hay IDs almacenados, muestra un mensaje.
      *
      * @return Lista de juegos creados.
      */
@@ -45,7 +43,6 @@ public class CreadorJuegos {
 
     /**
      * Obtiene una lista de IDs de juegos desde la API y la almacena en {@code gameIDs}.
-     * Muestra un mensaje indicando que los IDs fueron conseguidos.
      */
     public void conseguirIDs() {
         gameIDs.addAll(consultorApi.peticionIDs());
@@ -75,7 +72,7 @@ public class CreadorJuegos {
      * Recopila y formatea información específica de una lista JSON dentro de los datos de un juego.
      *
      * @param lista     JSONObject con los datos del juego.
-     * @param busqueda  Clave que identifica la lista de datos en el JSON (e.g., "developers", "genres").
+     * @param busqueda  Clave que identifica la lista de datos en el JSON.
      * @return Cadena de texto con los elementos de la lista separados por comas.
      */
     private String obtenerDatosLista(JSONObject lista, String busqueda) {

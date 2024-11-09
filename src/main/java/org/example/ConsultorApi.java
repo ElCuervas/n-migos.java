@@ -15,7 +15,6 @@ import java.util.ArrayList;
 public class ConsultorApi {
     private static final String apiKey = "93d03e013f054d4b957439eaa1b0503b"; //desabilitada
 
-
     /**
      * Método para obtener una lista de IDs de juegos desde la API.
      * @return lista con las IDs conseguidas de la api.
@@ -39,8 +38,6 @@ public class ConsultorApi {
         }
         return gameIDs;
     }
-
-
 
     /**
      * Método para obtener los detalles de un juego específico utilizando su ID.

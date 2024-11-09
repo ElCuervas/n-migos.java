@@ -1,8 +1,7 @@
 package org.example;
 public class Main {
     public static void main(String[] args) {
-        //pruebas catalogo post-refactoring
-
+        //pruebas catalogo
         Catalogo catalogo = new Catalogo();
         catalogo.mostrarCatalogo();
         catalogo.conseguirJuegos();
@@ -10,18 +9,6 @@ public class Main {
         catalogo.conseguirJuegos();
         catalogo.mostrarCatalogo();
 
-        System.out.println();
-        System.out.println();
-
-        //pruebas catalogo pre-refactoring
-        CatalogoPreR preCatalogo = new CatalogoPreR();
-        preCatalogo.mostrarCatalogo();
-        preCatalogo.conseguirJuegos();
-        preCatalogo.conseguirIDs();
-        preCatalogo.conseguirJuegos();
-        preCatalogo.mostrarCatalogo();
-
-        /*
         //pruebas usuario y perfil
         UsuarioRegistrado usuario1 = new UsuarioRegistrado(1,"juanito", "22123");
         Perfil perfil1 = new Perfil(usuario1);
@@ -36,6 +23,5 @@ public class Main {
         biblioteca.agregarJuego(juego2);
         biblioteca.agregarJuego(juego3);
         System.out.println(biblioteca);
-        */
     }
 }
