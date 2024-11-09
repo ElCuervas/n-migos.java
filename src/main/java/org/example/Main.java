@@ -10,7 +10,7 @@ public class Main {
         catalogo.mostrarCatalogo();
 
         //pruebas usuario y perfil
-        UsuarioRegistrado usuario1 = new UsuarioRegistrado(1,"juanito", "22123");
+        UsuarioRegistrado usuario1 = new UsuarioRegistrado(1,"juanito", "22123", true);
         Perfil perfil1 = new Perfil(usuario1);
         perfil1.mostrarInformacion();
 

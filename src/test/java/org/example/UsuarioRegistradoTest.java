@@ -16,7 +16,7 @@ class UsuarioRegistradoTest {
 
     @BeforeAll
     static void setUpBeforeClass(){
-        usuarioRegistrado = new UsuarioRegistrado(1,"Test","123");
+        usuarioRegistrado = new UsuarioRegistrado(1,"Test","123",true);
         juegoTest = new Juego("Titulo1", "2022", "Accion", "Desarrollador1", "url_imagen", "Descripción breve");
 
     }
@@ -39,10 +39,11 @@ class UsuarioRegistradoTest {
 
         usuarioRegistrado.iniciarSesion("1234");
 
-        assertEquals("contrasena no valida",outContent.toString());
+        assertEquals("contrasena no valida", outContent.toString().trim());
 
         System.setOut(System.out);
     }
+
     @Test
     void testAgregarJuegoBiblioteca() {
         usuarioRegistrado.agregarJuegoBiblioteca(juegoTest);
