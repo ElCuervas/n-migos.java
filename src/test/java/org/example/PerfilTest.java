@@ -15,7 +15,7 @@ public class PerfilTest {
 
     @BeforeEach
     void setUP(){
-        usuario = new UsuarioRegistrado(1,"juanito", "22123");
+        usuario = new UsuarioRegistrado(1,"juanito", "22123",true);
         System.setOut(new PrintStream(ContenidoSystem));
     }
     @Test
