@@ -18,6 +18,10 @@ public class Biblioteca {
         this.juegos = new ArrayList<>();
     }
 
+    public ArrayList<Juego> getJuegos() {
+        return juegos;
+    }
+
     /**
      * Agrega un juego a la biblioteca.
      *
@@ -53,4 +57,6 @@ public class Biblioteca {
         return "Biblioteca:" +
                   mensaje;
     }
+
+
 }

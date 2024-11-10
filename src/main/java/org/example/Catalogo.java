@@ -1,187 +1,71 @@
 package org.example;
 
-import org.json.JSONArray;
-import org.json.JSONObject;
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
-import java.net.URL;
 import java.util.ArrayList;
 
 /**
- * Clase que representa un catálogo de juegos. Permite gestionar una lista de juegos y obtener información
- * desde una API externa utilizando IDs de juegos.
+ * Clase que representa un catálogo de juegos. Permite gestionar una lista de juegos y crear más instancias de juego.
  */
 public class Catalogo {
-
     private final ArrayList<Juego> listaJuegos;
-    private final ArrayList<Integer> gameIDs;
+    private final CreadorJuegos creadorJuegos;
 
     /**
-     * Constructor de la clase Catalogo. Inicializa las listas de juegos y de IDs de juegos.
+     * Constructor que inicializa el catálogo con una lista vacía de juegos y un creador de juegos.
      */
     public Catalogo() {
         listaJuegos = new ArrayList<>();
-        gameIDs = new ArrayList<>();
+        creadorJuegos = new CreadorJuegos();
     }
 
-    private static final String apiKey = "af375b9d59e746259fe257e3b81e0f0d"; //Esta llave solo estara disponible hasta la revision de refactoring
+    /**
+     * Obtiene juegos desde una fuente externa y los agrega a la lista de juegos en el catálogo.
+     */
+    public void conseguirJuegos() {
+        listaJuegos.addAll(creadorJuegos.crearJuegosDesdeApi());
+    }
 
     /**
-     * Agrega un juego al catálogo.
-     * @param juego El juego que se desea añadir.
+     * Agrega un juego al catálogo si no está presente. Si el juego ya existe, muestra un mensaje.
+     *
+     * @param juego El juego a agregar al catálogo.
      */
     public void ingresarJuego(Juego juego) {
-        listaJuegos.add(juego);
-    }
-
-    /**
-     * Agrega una ID de juego al catálogo si no ha sido previamente ingresada.
-     * @param id La ID del juego que se desea agregar.
-     */
-    public void ingresarID(int id) {
-        if (gameIDs.contains(id)) {
-            System.out.println("La ID ya está guardada en el catálogo");
+        if (listaJuegos.contains(juego)) {
+            System.out.println("El juego ya se encuentra en el catálogo");
         } else {
-            gameIDs.add(id);
+            listaJuegos.add(juego);
         }
     }
 
     /**
-     * Muestra todos los juegos actualmente almacenados en el catálogo.
-     * Si el catálogo está vacío, se mostrará un mensaje indicándolo.
+     * Obtiene la lista de juegos actualmente en el catálogo.
+     *
+     * @return La lista de juegos en el catálogo.
+     */
+    public ArrayList<Juego> getListaJuegos() {
+        return listaJuegos;
+    }
+
+    /**
+     * Muestra los detalles de cada juego en el catálogo. Si el catálogo está vacío, muestra un mensaje.
      */
     public void mostrarCatalogo() {
         if (listaJuegos.isEmpty()) {
             System.out.println("El catálogo está vacío de momento");
         } else {
             for (Juego juego : listaJuegos) {
-                System.out.println("---------------------------------");
+                System.out.println("-----------------------------------------------------------------------------------------");
                 juego.mostrarDetalles();
             }
         }
     }
 
     /**
-     * Obtiene una lista de IDs de juegos desde la API externa y las agrega al catálogo.
+     * Obtiene el objeto creador de juegos asociado a este catálogo.
+     *
+     * @return El creador de juegos.
      */
-    public void conseguirIDs() {
-        String urlString = "https://api.rawg.io/api/games?key=" + apiKey + "&ordering=-added&page_size=10";
-
-        try {
-            URL url = new URL(urlString);
-            HttpURLConnection conn = (HttpURLConnection) url.openConnection();
-            conn.setRequestMethod("GET");
-            conn.setRequestProperty("Content-Type", "application/json");
-
-            int responseCode = conn.getResponseCode();
-
-            if (responseCode == HttpURLConnection.HTTP_OK) {
-                BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream()));
-                String inputLine;
-                StringBuilder response = new StringBuilder();
-
-                while ((inputLine = in.readLine()) != null) {
-                    response.append(inputLine);
-                }
-                in.close();
-
-                JSONObject jsonResponse = new JSONObject(response.toString());
-                JSONArray gamesArray = jsonResponse.getJSONArray("results");
-
-                for (int i = 0; i < gamesArray.length(); i++) {
-                    JSONObject game = gamesArray.getJSONObject(i);
-                    int gameId = game.getInt("id");
-                    this.ingresarID(gameId);
-                }
-                System.out.println("IDs conseguidas");
-            } else {
-                System.out.println("GET request fallido: " + responseCode);
-            }
-
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-    /**
-     * Obtiene información detallada de los juegos asociados a las IDs almacenadas y las agrega al catálogo.
-     */
-    public void conseguirJuegos() {
-        if (gameIDs.isEmpty()) {
-            System.out.println("Primero se tienen que ingresar las ID al catálogo");
-        }
-        for (Integer gameId : this.gameIDs) {
-            String urlString = "https://api.rawg.io/api/games/" + gameId + "?key=" + apiKey;
-
-            try {
-                URL url = new URL(urlString);
-                HttpURLConnection conn = (HttpURLConnection) url.openConnection();
-                conn.setRequestMethod("GET");
-                conn.setRequestProperty("Content-Type", "application/json");
-
-                int responseCode = conn.getResponseCode();
-
-                if (responseCode == HttpURLConnection.HTTP_OK) {
-                    BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream()));
-                    String inputLine;
-                    StringBuilder response = new StringBuilder();
-
-                    while ((inputLine = in.readLine()) != null) {
-                        response.append(inputLine);
-                    }
-                    in.close();
-
-                    JSONObject game = new JSONObject(response.toString());
-
-                    String name = game.optString("name");
-                    String released = game.optString("released");
-                    String description = game.optString("description");
-                    String backgroundImage = game.optString("background_image");
-
-                    JSONArray developersArray = game.optJSONArray("developers");
-                    StringBuilder developers = new StringBuilder();
-                    if (developersArray != null) {
-                        for (int i = 0; i < developersArray.length(); i++) {
-                            JSONObject developer = developersArray.getJSONObject(i);
-                            developers.append(developer.optString("name"));
-                            if (i < developersArray.length() - 1) {
-                                developers.append(", ");
-                            }
-                        }
-                    }
-
-                    JSONArray genresArray = game.optJSONArray("genres");
-                    StringBuilder genres = new StringBuilder();
-                    if (genresArray != null) {
-                        for (int i = 0; i < genresArray.length(); i++) {
-                            JSONObject genre = genresArray.getJSONObject(i);
-                            genres.append(genre.optString("name"));
-                            if (i < genresArray.length() - 1) {
-                                genres.append(", ");
-                            }
-                        }
-                    }
-
-                    Juego nuevoJuego = new Juego(name, released, genres.toString(), developers.toString(), backgroundImage, description);
-                    this.ingresarJuego(nuevoJuego);
-                    System.out.println("Se añadió el juego '" + name + "' al catálogo");
-
-                } else {
-                    System.out.println("GET request fallido: " + responseCode);
-                }
-
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        }
-    }
-
-    /**
-     * Obtiene la lista de juegos almacenados en el catálogo.
-     * @return La lista de juegos en el catálogo.
-     */
-    public ArrayList<Juego> getListaJuegos() {
-        return listaJuegos;
+    public CreadorJuegos getCreadorJuegos() {
+        return creadorJuegos;
     }
 }

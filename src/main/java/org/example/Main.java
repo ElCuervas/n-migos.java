@@ -5,12 +5,12 @@ public class Main {
         Catalogo catalogo = new Catalogo();
         catalogo.mostrarCatalogo();
         catalogo.conseguirJuegos();
-        catalogo.conseguirIDs();
+        catalogo.getCreadorJuegos().conseguirIDs();
         catalogo.conseguirJuegos();
         catalogo.mostrarCatalogo();
 
         //pruebas usuario y perfil
-        UsuarioRegistrado usuario1 = new UsuarioRegistrado(1,"juanito", "22123");
+        UsuarioRegistrado usuario1 = new UsuarioRegistrado(1,"juanito", "22123", true);
         Perfil perfil1 = new Perfil(usuario1);
         perfil1.mostrarInformacion();
 
@@ -23,6 +23,5 @@ public class Main {
         biblioteca.agregarJuego(juego2);
         biblioteca.agregarJuego(juego3);
         System.out.println(biblioteca);
-
     }
 }
