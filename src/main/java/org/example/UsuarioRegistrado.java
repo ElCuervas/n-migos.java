@@ -1,69 +1,74 @@
 package org.example;
+
 import java.util.ArrayList;
 
 /**
- * Clase que representa un usuario registrado dentro del sistema.
- * Hereda de la clase {@link Usuario} y permite gestionar las acciones
- * de un usuario como iniciar sesión, administrar su biblioteca de juegos,
- * puntuar juegos y dejar reseñas.
+ * Clase que representa un usuario dentro del sistema.
+ * Dependiendo de si el usuario está registrado o no, puede acceder a diferentes funcionalidades.
  */
 public class UsuarioRegistrado extends Usuario {
 
-    /**
-     * Nombre del usuario registrado.
-     */
     private String nombre;
-
-    /**
-     * Contraseña del usuario registrado.
-     */
-    private String contraseña;
-
-    /**
-     * Lista de géneros favoritos del usuario.
-     */
+    private String contrasena;
     private ArrayList<String> generoFavorito;
-
-    /**
-     * Biblioteca asociada al usuario donde se almacenan sus juegos.
-     */
     private Biblioteca biblioteca;
+    private boolean estaRegistrado;
 
     /**
-     * Constructor de la clase UsuarioRegistrado.
+     * Constructor para usuario registrado.
      *
      * @param idUsuario   Identificador único del usuario.
      * @param nombre      Nombre del usuario.
-     * @param contraseña  Contraseña del usuario.
+     * @param contrasena  contrasena del usuario.
+     * @param estaRegistrado Booleano que indica si el usuario está registrado.
      */
-    public UsuarioRegistrado(long idUsuario, String nombre, String contraseña) {
+    public UsuarioRegistrado(long idUsuario, String nombre, String contrasena, boolean estaRegistrado) {
         this.idUsuario = idUsuario;
         this.nombre = nombre;
-        this.contraseña = contraseña;
+        this.contrasena = contrasena;
         this.generoFavorito = new ArrayList<>();
         this.biblioteca = new Biblioteca();
+        this.estaRegistrado = estaRegistrado;
     }
 
     /**
-     * Método para iniciar sesión del usuario comparando la contraseña ingresada.
-     *
-     * @param contraseña Contraseña ingresada por el usuario.
+     * Método para registrar el usuario.
      */
-    public void iniciarSesion(String contraseña) {
-        if (this.contraseña == contraseña) {
-            System.out.println("Iniciando sesión para el usuario: " + nombre);
-        }else{
-            System.out.printf("Contraseña no valida");
+    public void registrar() {
+        if (!estaRegistrado) {
+            System.out.println("Registrando usuario...");
+            estaRegistrado = true;
+        } else {
+            System.out.println("El usuario ya está registrado.");
         }
     }
 
     /**
-     * Obtiene la biblioteca asociada al usuario.
+     * Método para iniciar sesión.
      *
-     * @return La biblioteca del usuario.
+     * @param contrasena contrasena ingresada por el usuario.
      */
-    public Biblioteca getBiblioteca() {
-        return biblioteca;
+    public void iniciarSesion(String contrasena) {
+        if (!estaRegistrado) {
+            System.out.println("Usuario no registrado, no puede iniciar sesión.");
+            return;
+        }
+        if (this.contrasena.equals(contrasena)) {
+            System.out.println("Iniciando sesión para el usuario: " + nombre);
+        } else {
+            System.out.println("contrasena no valida");
+        }
+    }
+
+    /**
+     * Permite iniciar sesión como invitado.
+     */
+    public void iniciarComoInvitado() {
+        if (estaRegistrado) {
+            System.out.println("El usuario ya está registrado, no puede iniciar como invitado.");
+        } else {
+            System.out.println("Iniciando sesión como invitado...");
+        }
     }
 
     /**
@@ -72,7 +77,11 @@ public class UsuarioRegistrado extends Usuario {
      * @param juego Juego a agregar.
      */
     public void agregarJuegoBiblioteca(Juego juego) {
-        biblioteca.agregarJuego(juego);
+        if (estaRegistrado) {
+            biblioteca.agregarJuego(juego);
+        } else {
+            System.out.println("Usuario no registrado. No tiene permisos para agregar juegos a la biblioteca.");
+        }
     }
 
     /**
@@ -81,7 +90,11 @@ public class UsuarioRegistrado extends Usuario {
      * @param juego Juego a eliminar.
      */
     public void eliminarJuegoBiblioteca(Juego juego) {
-        biblioteca.eliminarJuego(juego);
+        if (estaRegistrado) {
+            biblioteca.eliminarJuego(juego);
+        } else {
+            System.out.println("Usuario no registrado. No tiene permisos para eliminar juegos de la biblioteca.");
+        }
     }
 
     /**
@@ -91,7 +104,11 @@ public class UsuarioRegistrado extends Usuario {
      * @param puntuacion Puntuación que se le asigna al juego.
      */
     public void puntuarJuego(Juego juego, float puntuacion) {
-        juego.setCalificacion(puntuacion);
+        if (estaRegistrado) {
+            juego.setCalificacion(puntuacion);
+        } else {
+            System.out.println("Usuario no registrado. No tiene permisos para puntuar juegos.");
+        }
     }
 
     /**
@@ -101,8 +118,15 @@ public class UsuarioRegistrado extends Usuario {
      * @param resena Contenido de la reseña.
      */
     public void dejarResena(Juego juego, String resena) {
-        Resena nuevaResena = new Resena(this, resena);
-        juego.agregarResena(nuevaResena);
+        if (estaRegistrado) {
+            if (resena.isEmpty()) {
+                throw new IllegalArgumentException("El texto de la reseña no puede estar vacío.");
+            }
+            Resena nuevaResena = new Resena(this, resena);
+            juego.agregarResena(nuevaResena);
+        } else {
+            System.out.println("Usuario no registrado. No tiene permisos para dejar reseñas.");
+        }
     }
 
     /**
@@ -112,27 +136,39 @@ public class UsuarioRegistrado extends Usuario {
      * @param resena Reseña a eliminar.
      */
     public void eliminarResena(Juego juego, Resena resena) {
-        juego.eliminarResena(resena);
+        if (estaRegistrado) {
+            juego.eliminarResena(resena);
+        } else {
+            System.out.println("Usuario no registrado. No tiene permisos para eliminar reseñas.");
+        }
     }
 
     /**
-     * Busca un juego en la biblioteca del usuario por su nombre.
+     * Busca un juego por su nombre.
      *
      * @param nombre Nombre del juego a buscar.
      */
     @Override
     public void buscarJuegoPorNombre(String nombre) {
-        System.out.println("Buscando juego en la biblioteca del usuario: " + nombre);
+        System.out.println("Buscando juego: " + nombre);
     }
 
     /**
-     * Filtra los juegos en la biblioteca del usuario según un criterio.
+     * Filtra los juegos según un criterio específico.
      *
      * @param filtro Criterio de filtro a aplicar.
      */
     @Override
     public void filtrarJuegos(String filtro) {
-        System.out.println("Filtrando juegos en la biblioteca del usuario: " + filtro);
+        System.out.println("Filtrando juegos con filtro: " + filtro);
     }
 
+    /**
+     * Método para obtener la biblioteca del usuario.
+     *
+     * @return la biblioteca del usuario.
+     */
+    public Biblioteca getBiblioteca() {
+        return biblioteca;
+    }
 }
