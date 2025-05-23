@@ -3,17 +3,26 @@ gitGraph
    commit id: "Inicio"
    branch dev
    checkout dev
-   commit id: "Primera integración"
-   branch backend
-   branch fronted
-   checkout backend
-   commit id: "Trabajo backend"
+   branch feature
+   branch vista
+   checkout feature
+   commit id: "Trabajo en feature"
+   checkout vista
+   commit id: "Trabajo en vista"
+   checkout feature
+   merge vista
    checkout dev
-   merge backend
-   checkout fronted
-   commit id: "Trabajo fronted"
+   merge feature
+   branch hotfix
+   checkout hotfix
+   commit id: "Hotfix urgente"
    checkout dev
-   merge fronted
-   checkout main
+   merge hotfix
+   checkout hotfix
    merge dev
+   branch release
+   checkout release
+   commit id: "Preparar release"
+   checkout main
+   merge release
 ```
